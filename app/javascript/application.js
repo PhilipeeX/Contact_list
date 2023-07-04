@@ -2,5 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "jquery"
-import "popper.js/dist/umd/popper"
+import "@popperjs/core"
 import "bootstrap"
