@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.6, asdf: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.4, asdf: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v10.4.13.0, asdf: 3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.18, asdf: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, asdf: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.16.0, asdf: 3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap (v5.3.0.alpha3, asdf: 3.1.2) [gem]" level="application" />

@@ -29,3 +29,44 @@ footer {
     }
   }
 }
+
+.form-floating {
+  position: relative;
+}
+
+.form-floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.invalid-feedback {
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+
+.form-control.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+// Estilos personalizados para os rótulos flutuantes
+.floating-label {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  font-size: 12px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus + .floating-label,
+.form-control:not(:placeholder-shown) + .floating-label {
+  top: 0px;
+  font-size: 16px;
+  opacity: 1;
+}
