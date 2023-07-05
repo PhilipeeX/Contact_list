@@ -1,0 +1,21 @@
+.form-floating-label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-size: 12px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-floating-label.active {
+  top: -30px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.form-control:focus + .form-floating-label,
+.form-control:not(:placeholder-shown) + .form-floating-label {
+  top: -30px;
+  font-size: 14px;
+  opacity: 1;
+}

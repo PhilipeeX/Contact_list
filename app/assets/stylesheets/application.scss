@@ -1,0 +1,72 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+$gray-medium-light: #EAEAEA;
+$gray: #808080;
+$gray-light: #a7a7a7;
+$gray-darker: #5d5d5d;
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a{
+    color: $gray;
+    &:hover{
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+.form-floating {
+  position: relative;
+}
+
+.form-floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.invalid-feedback {
+  display: none;
+  color: red;
+  margin-top: 5px;
+}
+
+.form-control.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+// Estilos personalizados para os rótulos flutuantes
+.floating-label {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  font-size: 12px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus + .floating-label,
+.form-control:not(:placeholder-shown) + .floating-label {
+  top: 0px;
+  font-size: 16px;
+  opacity: 1;
+}
