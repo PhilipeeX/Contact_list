@@ -1,6 +1,6 @@
 <% if @user.errors.any? %>
   <div class="alert alert-danger">
-    <h4><%= pluralize(@user.errors.count, 'erro') %> encontrados:</h4>
+    <h4><%= pluralize(@user.errors.count, 'erro', 'erros') %> encontrados:</h4>
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>

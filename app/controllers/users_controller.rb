@@ -10,7 +10,6 @@ class UsersController < ApplicationController
       redirect_to root_url
 
     else
-      puts @user.errors.full_messages
       render 'new'
     end
   end
