@@ -10,8 +10,8 @@ class UsersController < ApplicationController
       redirect_to root_url
 
     else
-      puts @user.errors.full_messages
-      render 'new'
+      flash[:alert] = @user.errors.full_messages.join('. ')
+      redirect_to new_user_path
     end
   end
 
