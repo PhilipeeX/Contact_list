@@ -3,11 +3,15 @@ class SessionsController < ApplicationController
   end
   def create
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:passsword])
+    if user && user.authenticate(params[:session][:password])
       sign_in(user)
       redirect_to user_path(user)
     else
-      flash.now[:danger] = 'Email ou senha invalidos'
+      if user
+        flash[:alert] = 'senha invalida'
+      else
+        flash[:alert] = "Email: #{params[:session][:email]} não encontrado"
+      end
       redirect_to entrar_path
     end
   end
