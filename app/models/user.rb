@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   before_save :email_downcase
+  has_many :contacts
 
 
   validates :name, presence: true, length: { maximum: 50 }
