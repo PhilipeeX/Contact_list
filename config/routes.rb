@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get 'contato', to: 'static_pages#contato'
   get 'entrar', to: 'sessions#new'
   post 'entrar', to: 'sessions#create'
-  delete 'sair', to: 'sessions#destroy'
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get 'sair', to: 'sessions#destroy'
+  get 'contacts', to: 'contacts#index'
+
+
   resources :contacts
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :edit, :update]
 end

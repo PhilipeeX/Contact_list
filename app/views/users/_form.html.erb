@@ -1,0 +1,39 @@
+<%= form_with(model: user, local: true, class: 'needs-validation') do |form| %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <div class="form-floating mb-3">
+    <%= form.text_field :name, class: 'form-control', id: 'floatingName', placeholder: 'Nome', required: true %>
+    <%= form.label :name, 'Nome', class: 'form-floating-label' %>
+    <div class="invalid-feedback">
+      <%= form.object&.errors&.full_messages_for(:name)&.first %>
+    </div>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= form.email_field :email, class: 'form-control', id: 'floatingEmail', placeholder: 'name@example.com', required: true %>
+    <%= form.label :email, 'Email address', class: 'form-floating-label' %>
+    <div class="invalid-feedback">
+      <%= form.object&.errors&.full_messages_for(:email)&.first %>
+    </div>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= form.password_field :password, class: 'form-control', id: 'floatingPassword', placeholder: 'Password', required: true %>
+    <%= form.label :password, 'Password', class: 'form-floating-label' %>
+    <div class="invalid-feedback">
+      <%= form.object&.errors&.full_messages_for(:password)&.first %>
+    </div>
+  </div>
+
+  <div class="form-floating mb-3">
+    <%= form.password_field :password_confirmation, class: 'form-control', id: 'floatingPasswordConfirmation', placeholder: 'Confirm Password', required: true %>
+    <%= form.label :password_confirmation, 'Confirm Password', class: 'form-floating-label' %>
+    <div class="invalid-feedback">
+      <%= form.object&.errors&.full_messages_for(:password_confirmation)&.first %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Save', class: 'btn btn-primary' %>
+  </div>
+<% end %>
